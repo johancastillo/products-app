@@ -1,0 +1,124 @@
+import { Column, Entity, ObjectID, ObjectIdColumn } from "typeorm";
+@Entity()
+export class Movimientos{
+    @ObjectIdColumn()
+    _id: ObjectID;
+
+    @Column(type => Actividad)
+    actividad_economica: Actividad[];
+
+    @Column()
+    activo: boolean;
+    
+    @Column()
+    cargo: string;
+    
+    @Column()
+    comision_publicidad: string;
+    
+    @Column(type => Contacto)
+    contactos: Contacto[];
+    
+    @Column()
+    correo_electronica: string;
+    
+    @Column()
+    correo_representante: string;
+    
+    @Column()
+    cupo: string;
+
+    @Column()
+    cupo_minimo: string;
+
+    @Column()
+    domicilio_fiscal: string;
+
+    @Column()
+    duracion: string;
+
+    @Column()
+    fecha_inicio: string;
+
+    @Column()
+    fee_publicidad: string;
+
+    @Column()
+    nombreAC: string;
+
+    @Column()
+    observaciones: string;
+
+    @Column()
+    periodo_prueba: string;
+
+    @Column()
+    plus_recarga: number;
+
+    @Column()
+    ppvv: Array<{}>;
+
+    @Column()
+    prepago: string;
+
+    @Column()
+    representante_legal: string;
+
+    @Column()
+    rif: string;
+
+    @Column()
+    saldo: {actual: number, base: number, maximo: number, minimo: number, nuevo: number, disponible: number, diferido: number, anticipo: number, real: number}
+
+    @Column()
+    saldo_actual: string;
+
+    @Column()
+    telefonos: string;
+
+    @Column()
+    telf_representante: string;
+
+    @Column()
+    punto_comercial: Array;
+
+    @Column()
+    punto_venta: Array;
+
+    @Column()
+    telefono: string;
+
+    @Column()
+    esDristribuidor: boolean;
+
+    @Column()
+    razon_social: string;
+
+    @Column()
+    direccion: string;
+
+    @Column(type => Vendedor)
+    vendedor: Vendedor;
+
+    @Column()
+    usuarios: Array;
+
+    @Column()
+    email: string;
+
+    @Column()
+    ultima_recarga: {codigo_repuesta: string, codigo_aprobacion: string, numeroServicio_mvto: string, monto: number, monto_neto: number, status: string, fecha_mvto: Date};
+
+    @Column()
+    asignar_maquina: boolean;
+
+    @Column()
+    credito: {activo: boolean, monto: number, tiempo: number, contadorSobregiros: number, sobregirado: boolean, fecha: Date};
+
+    @Column("simple-array")
+    privilegios: string[];
+
+    @Column()
+    compras_conciliadas: number;
+
+}

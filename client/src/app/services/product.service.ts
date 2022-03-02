@@ -8,7 +8,10 @@ import { Observable } from 'rxjs'
 })
 export class ProductService {
 
-  BASE_URL: string = 'http://localhost:8081';
+  port:string = '8081';
+  host:string = '10.10.20.119';
+  
+  BASE_URL: string = `http://${this.host}:${this.port}`;
 
   constructor(private http: HttpClient) { }
 

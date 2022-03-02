@@ -2,9 +2,9 @@ import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule);
-  app.enableCors();
+  const app = await NestFactory.create(AppModule, {cors: true});
+
   await app.listen(8081);
-  console.log('Server on port', 8081)
+  console.log('Server on port', 8081);
 }
 bootstrap();
